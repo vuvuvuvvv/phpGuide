@@ -1,0 +1,53 @@
+body {
+	font-family: Sans-serif;
+}
+img {
+	width: calc(50% - 20px);
+}
+.image {
+	padding-right: 15px;
+}
+.container {
+	display: inline;
+}
+.container_2 {
+	width: calc(50% - 20px);
+	float: left;
+}
+.container_3 {
+	float: left;
+}
+.para {
+	padding: 15px;
+}
+.para_1 {
+	line-height: 1.6;
+	padding: 15px;
+}
+.clearfix {
+	overflow: auto;
+}
+a.click {
+	text-decoration: none;
+	padding: 15px;
+	border: 1px solid #77bddf;
+	background-color: #77bddf;
+	color: white;
+	border-radius: 100px;
+	margin: 15px;
+}
+a:hover.click {
+	background-color: blue;
+	transition: 0.5s;
+}
+a.click_1 {
+	text-decoration: none;
+	padding: 15px;
+	border: 1px solid #94d26f;
+	background-color: #94d26f;
+	color: white;
+	border-radius: 100px;
+}
+a:hover.click_1 {
+	background-color: green;
+	transition: 0.5s;

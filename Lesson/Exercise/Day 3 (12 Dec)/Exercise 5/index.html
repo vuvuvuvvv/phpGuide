@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 5</title>
+	<meta charset="UTF-8" >
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form method="POST" action="/action_page.php">
+		<b><label>Simple form with name and age</label></b>
+		<br>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" value="Albert" maxlength="50">
+		<br><br>
+		<label for="age">Age :</label>
+		<input type="number" id="age" name="age" value="39" maxlength="3">
+		<button type="submit" onclick="alert('YOUR INFORMATION IS UPDATE')">Add</button>
+			<br><br>
+		<b>Current data in the system...</b>
+		<table>
+			<tr>
+					<td></td>
+					<th>Name</th>
+					<th>Age</th>		
+			</tr>
+			<tr>
+					<td><button><a href="">Delete</a></button></td>
+					<td>John</td>
+					<td>23</td>
+			</tr>
+			<tr>
+					<td><button><a href="">Delete</a></button></td>
+					<td>Mike</td>
+					<td>55</td>
+			</tr>
+			<tr>
+					<td><button><a href="">Delete</a></button></td>
+					<td>Albert</td>
+					<td>39</td>
+			</tr>
+		</table>
+		<p><button type="submit"><a href="">Click here</a></button> to creat Table and some data using Javascript</p>
+	</form>
+</body>
+</html>

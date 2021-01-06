@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 3</title>
+		<meta charset="UTF-8" >
+	</head>
+	<body>
+		<h1>Travel reservation form</h1>
+		<h3>*denotes mandotory</h3>
+		<form method="POST" action="/action_page.php">
+			<label for="fullname">Full name*:</label>
+			<br>
+			<input id="fullname" type="text" name="fullname" placeholder="FirstName LastName">
+			<br>
+			<label for="email">Email address*:</label>
+			<br>
+			<input id="email" type="text" name="email">
+			<br>
+			<label for="tour">Select Tour Package*:</label>
+			<br>
+			<select id="tour" name="tour">
+				<option value="Goa">Goa</option>
+				<option value="Ha Noi">Ha Noi</option>
+				<option value="Ho Chi Minh">Ho Chi Minh</option>
+			</select>
+			<br>
+			<label for="Date">Arrival date*:</label>
+			<br>
+			<input type="date" id="Date" name="Date" placeholder="m/d/y">
+			<br>
+			<label for="persons">Number of persons*:</label>
+			<br>
+			<input type="number" id="persons" name="persons" min="1" max="100">
+			<br>
+			<label>What would you want avail?*</label>
+			<br>
+			<input type="checkbox" id="board" name="boarding">
+			<label for="board">Boarding</label>
+			<br>
+			<input type="checkbox" id="food" name="food">
+			<label for="food">Fooding</label>
+			<br>
+			<input type="checkbox" id="view" name="view">
+			<label for="view">Sight seeing</label>
+			<br>
+			<label for="code">Discount Coupon code</label>
+			<br>
+			<input type="number" id="code" name="code">
+			<br>
+			<label>Term and Conditions*</label>
+			<br>
+			<input type="radio" id="term" name="agree">
+			<label for="radio">I agree</label>
+			<br>
+			<input type="radio" id="term" name="disagree">
+			<label for="radio">I disagree</label>
+			<br>
+			<button type="submit">Complete reservation</button>
+		</form>
+	</body>
+</html>

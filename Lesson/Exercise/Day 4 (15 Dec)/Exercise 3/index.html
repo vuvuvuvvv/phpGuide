@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 3</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Application for permission to date my daughter</h1>
+		<p><b>Note:</b> Form is to be completed at least 21 days prior to date</p>
+		<form action="/action_page.php" method="POST">
+			<fieldset>
+				<legend>Personal Details</legend>
+				<label for="Name">Name:</label>
+				<input type="text" id="Name" name="Name" placeholder="Enter name here"><br>
+				<label for="address">Address:</label>
+				<input type="text" id="address" name="address" placeholder="Enter address here"><br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" placeholder="Enter email here"><br>
+				<label for="phone">Phone Number:</label>
+				<input type="number" id="phone" name="phone" placeholder="Enter digit 10 number" maxlength="10"><br>
+				<label for="IQ">IQ: 
+				</label>
+				<input type="number" id="IQ" name="IQ" placeholder="Enter IQ here">
+				<p>
+					<label for="gender">Gender</label><br>
+					<input id="gender" type="radio" name="male">
+					<label for="gender">Male</label></br>
+					<input id="gender" type="radio" name="female">
+					<label for="gender">Female</label></br>
+					<input id="gender" type="radio" name="other">
+					<label for="gender">Other</label></br>
+				</p>
+				<label for="Date">Date of Proposed Outing:</label>
+				<input id="Date" type="date" name="Date">		
+			</fieldset>
+			<fieldset>
+				<label>Check All The Apply</label><br><br>
+				<input type="checkbox" id="check" name="check">
+				<label for="checkbox">I have tattoos and/or piercings</label><br>
+				<input type="checkbox" id="check" name="check_1">
+				<label for="checkbox">I am more than 2 years older than my daughter</label><br>
+				<input type="checkbox" id="check" name="check_2">
+				<label for="checkbox">I own a panel van or V8 ute</label><br>
+				<input type="checkbox" id="check" name="check_3">
+				<label for="checkbox">I work full-time</label><br>
+				<input type="checkbox" id="check" name="check_4">
+				<label for="checkbox">My parents are rich</label><br>
+				<input type="checkbox" id="check" name="check_5">
+				<label for="checkbox">Is the date a well lit public location</label><br>
+			</fieldset>
+			<fieldset>
+				<label for="pol">Poltical Persuasion:</label>
+				<input list="polt" id="pol" name="pol">
+				<datalist id="polt">
+					<option value="Left Wing">
+					<option value="Right Wing">
+					<option value="Conservation">
+					<option value="Nazi">
+				</datalist>
+				<label for="Level">Education Level Completed:</label>
+				<input list="level" id="Level" name="Level">
+				<datalist id="level">
+					<option value="University">
+					<option value="College">
+					<option value="High School">
+					<option value="None">
+				</datalist>
+			</fieldset>
+			<fieldset>
+				<legend>Essay Section</legend><br>
+				<label>In 50 words or more explain why you want to date my daughter</label>
+				<br>
+				<textarea cols="55" rows="5" placeholder="Enter Text Here"></textarea>
+				<br>
+				<label>Please upload contact details for references</label>
+				<br>
+				<textarea cols="55" rows="5" placeholder="Enter Text Here"></textarea>
+				<br>
+				<label>Upload Police Clearance Certificate, Bank Statement and Medical Certifiates here:</label>
+				<input type="file" id="File" name="File">
+			</fieldset>
+			<button type="submit">Send your application</button>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Exercise 4</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="bootstrap.css">
+		<script type="text/javascript">
+			function checkPass()
+			{
+				var pass         ="";
+				var confirm_pass ="";
+				if(document.getElementById('pass').value == document.getElementById('confirm_pass').value)
+				{
+					document.getElementById('errospass').innerHTML = "";
+				}
+				else
+				{
+					document.getElementById('errorpass').innerHTML = "*Mật khẩu không trùng khớp!";
+				}
+			}		
+		</script>
+	</head>
+	<body>
+		<div class="container-sm">	
+			<h5 class="para">Đăng ký thành viên</h5>
+			<p>Để đăng ký thành viên, bạn cần khai báo tát cả các ô trống dưới đây</p>
+			<form action="" method="post">
+				<input class="input" type="text" id="lastname" name="lastName" placeholder="Họ và tên đệm"><br>
+				<input class="input" type="text" id="firtname" name="firstName" placeholder="Tên"><br>
+				<input class="input" type="text" id="username" name="userName" placeholder="Tên đăng nhập"><br>
+				<input class="input" type="email" id="email" name="email" placeholder="Email"><br>
+				<input class="input" type="password" id="pass" name="pass" placeholder="Mật khẩu"><br>
+				<input class="input" type="password" id="confirm_pass" name="confirm_p	q1ass" placeholder="Lặp lại mật khẩu"><br>
+				<span id="errorpass"></span>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>Giới tính</p>
+					</div>
+					<div class="col-sm-8">
+						<input type="radio" id="gender" name="other">
+						<label for="gender">N/A</label>
+						<input type="radio" id="male" name="Male">
+						<label for="male">Nam</label>
+						<input type="radio" id="female" name="feMale">
+						<label for="female">Nữ</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<p>Ngày tháng năm sinh</p>
+					</div>
+					<div class="col-sm-8">
+						<input class="input" type="date" id="date" name="date"><br>
+					</div>
+				<textarea class="input" placeholder="Chữ ký" cols="100%"></textarea>
+				<input class="input" id="security" name="security_question" list="question" placeholder="Câu hỏi bảo mật">
+				<datalist id="question">
+					<option value="Tên bố của bạn?">
+					<option value="Tên mẹ của bạn?">
+					<option value="Tên thuở nhỏ của bạn?">
+					<option value="4 số cuối số điện thoại của bạn?">
+					<option value="Tên trường tiểu học đầu tiên bạn học?">
+				</datalist>
+				<input class="input" type="text" id="security" name="answer" placeholder="Trả lời câu hỏi">
+				<div class="click">
+					<label><input type="checkbox" id="agree" name="choice">Tôi đồng ý với <a class="link" href="">Quy định đăng ký thành viên</a></label>
+				</div>
+				<div class="click">
+					<button type="reset">Thiết lập lại</button>
+					<button onclick="checkPass(); return false;">Đăng ký thành viên</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

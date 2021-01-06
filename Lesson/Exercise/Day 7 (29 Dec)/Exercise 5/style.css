@@ -1,0 +1,43 @@
+.style_container {
+	
+}
+.lb {
+	color: #015785;
+	font-weight: 600;
+}
+.char {
+	color: red;
+}
+input {
+	width: 100%;
+}
+img.code {
+	padding-left: 20px;
+}
+button.btn {
+	color: white;
+	background-color: #8bc248;
+	font-weight: 550;
+	width: 100%;
+}
+button.btn_2 {
+	color: black;
+	background-color: white;
+	border: 1px solid black;
+	font-weight: 550;
+	width: 100%;
+}
+button:hover.btn_3 {
+	color: black;
+	border: 1px solid black;
+}
+button:hover.btn_4 {
+	color: white;
+	background-color: #8b8c8c;
+	transition: 0.3s;
+	font-weight: 550;
+	width: 100%;
+}
+.para {
+	color: red;
+}

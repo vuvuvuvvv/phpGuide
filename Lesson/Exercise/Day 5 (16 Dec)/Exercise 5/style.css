@@ -1,0 +1,49 @@
+body {
+	background-color: #f6f3e5;
+}
+.form {
+	background-color: white;
+	width: 85%;
+	margin: auto;
+}
+.clearfix {
+	overflow: auto;
+}
+.article {
+	padding: 5px;
+	width: 70%;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.side_1 {
+	background-color: #ffffc5;
+	padding: 5px;
+	width: 30%;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: right;
+}
+.side_2 {
+	background-color: #ffebeb;
+	padding: 5px;
+	width: 30%;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: right;
+}
+.side_3 {
+	background-color: #c5ffff;
+	padding: 5px;
+	width: 30%;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: right;
+}
