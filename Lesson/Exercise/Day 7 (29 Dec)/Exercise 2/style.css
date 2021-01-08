@@ -1,7 +1,7 @@
-.title {
+.heading {
 	text-align: center;
 }
-.heading {
+.title {
 	font-size: 60px;
 	font-weight: 700;
 	color: #fdd01b;
@@ -11,30 +11,6 @@ img {
 	height: calc(80% - 25px);
 	padding: 30px;
 }
-.container-fluid {
-	width: 1120px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: 75px;
-    margin-left: 75px;
-}
-.row {
-	margin: 15px;
-	
-}
-.col-sm-6 {
-	width: 100%;
-	text-align: center;
-	padding-left: -15px;
-	padding-right: -15px;
-}
 p {
 	font-style: italic;
-}
-.vertical-center {
-  min-height: 100%;  
-  min-height: 100px; 
- 
-  display: flex;
-  align-items: center;
 }

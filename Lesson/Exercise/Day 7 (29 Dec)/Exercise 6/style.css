@@ -25,7 +25,6 @@ button.btn_2 {
 }
 button:hover.btn_3 {
 	color: black;
-	border: 1px solid black;
 }
 button:hover.btn_4 {
 	color: white;
@@ -35,7 +34,7 @@ button:hover.btn_4 {
 	width: 100%;
 }
 img {
-	width: 99%;
+	height: 120px;
 }
 p {
 	text-align: center;

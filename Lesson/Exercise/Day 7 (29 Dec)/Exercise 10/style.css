@@ -1,0 +1,13 @@
+.icon {
+	width: 18px;
+	height: 18px;
+}
+.date-right {
+	text-align: right;
+}
+.link {
+	text-align: right;
+	text-decoration: none;
+	color: white;
+	padding: 35px;
+}

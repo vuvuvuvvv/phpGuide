@@ -10,24 +10,24 @@ img {
 .container {
 	display: inline;
 }
-.container_2 {
+.content-primary {
 	width: calc(50% - 20px);
 	float: left;
 }
-.container_3 {
+.content-secondary {
 	float: left;
 }
-.para {
+.heading {
 	padding: 15px;
 }
-.para_1 {
+.para {
 	line-height: 1.6;
 	padding: 15px;
 }
 .clearfix {
 	overflow: auto;
 }
-a.click {
+a.link-item-primary {
 	text-decoration: none;
 	padding: 15px;
 	border: 1px solid #77bddf;
@@ -36,11 +36,11 @@ a.click {
 	border-radius: 100px;
 	margin: 15px;
 }
-a:hover.click {
+a:hover.link-item-primary {
 	background-color: blue;
 	transition: 0.5s;
 }
-a.click_1 {
+a.link-item-secondary {
 	text-decoration: none;
 	padding: 15px;
 	border: 1px solid #94d26f;
@@ -48,6 +48,6 @@ a.click_1 {
 	color: white;
 	border-radius: 100px;
 }
-a:hover.click_1 {
+a:hover.link-item-secondary {
 	background-color: green;
 	transition: 0.5s;

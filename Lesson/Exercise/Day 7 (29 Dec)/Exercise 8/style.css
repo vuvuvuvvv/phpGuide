@@ -2,13 +2,10 @@ body {
 	background-image: linear-gradient(white,#b3ffff,white,#b3ffff,white);
 	font-family: Lora, sans-serif;
 }
-.container_1 {
-	text-align: center;
-}
-img.img_1 {
+img.img_primary {
 	height: 200px;
 }
-.container_2 {
+.container {
 	text-align: center;
 	background-color: #ff8000;
 }
@@ -43,10 +40,10 @@ p, li {
 .image_text {
 	text-align: center;
 }
-img.img_2 {
+img.img_secondary {
 	width: 800px;
 }
-img.img_3 {
+img.size-img {
 	width: 600px;
 }
 .col-sm_2 {
@@ -56,7 +53,7 @@ img.img_3 {
 footer {
 	background-color: white;
 }
-.para {
+p.comment {
 	text-align: right;
 	padding: 35px;
 	color: white;

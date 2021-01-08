@@ -11,10 +11,10 @@ body {
 .image-balance {
 	transform: translateY(-80%);
 }
-.row-balance {
+.row-balance-information {
 	transform: translateY(-240%);
 }
-.row-balance_2 {
+.row-balance_profile {
 	transform: translateY(-50%);
 }
 .profile{
@@ -47,7 +47,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.para {
+.comment {
 	text-align: right;
 	padding: 35px;
 	color: white;

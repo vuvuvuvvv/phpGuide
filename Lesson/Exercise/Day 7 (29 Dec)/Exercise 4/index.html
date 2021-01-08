@@ -5,21 +5,6 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="bootstrap.css">
-		<script type="text/javascript">
-			function checkPass()
-			{
-				var pass         ="";
-				var confirm_pass ="";
-				if(document.getElementById('pass').value == document.getElementById('confirm_pass').value)
-				{
-					document.getElementById('errospass').innerHTML = "";
-				}
-				else
-				{
-					document.getElementById('errorpass').innerHTML = "*Mật khẩu không trùng khớp!";
-				}
-			}		
-		</script>
 	</head>
 	<body>
 		<div class="container-sm">	
@@ -72,5 +57,20 @@
 				</div>
 			</form>
 		</div>
+		<script type="text/javascript">
+			function checkPass()
+			{
+				var pass         ="";
+				var confirm_pass ="";
+				if(document.getElementById('pass').value == document.getElementById('confirm_pass').value)
+				{
+					document.getElementById('errospass').innerHTML = "";
+				}
+				else
+				{
+					document.getElementById('errorpass').innerHTML = "*Mật khẩu không trùng khớp!";
+				}
+			}		
+		</script>
 	</body>
 </html>

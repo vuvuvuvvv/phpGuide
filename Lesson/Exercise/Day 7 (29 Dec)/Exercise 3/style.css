@@ -1,10 +1,10 @@
 body {
 	font-family: Sans-serif;
 }
-.container-1 {
+.container-top {
 	background-color: black;
 }
-.container-2 {
+.container-bottom {
 	background-color: #151515;
 }
 .form-color_label {
@@ -47,7 +47,7 @@ p.box {
 	color: white;
 	font-size: 20px;
 }
-p.para {
+p.comment {
 	color: #4e4e4e;
 	padding-bottom: 10px;
 	padding-top: 10px;
