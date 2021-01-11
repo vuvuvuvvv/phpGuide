@@ -2,7 +2,7 @@ body {
 	background-image: linear-gradient(white,#b3ffff,white,#b3ffff,white);
 	font-family: Lora, sans-serif;
 }
-.bor {
+.img_border {
 	border: 7px solid white;
 	border-radius: 50%;
 	height: 100%;

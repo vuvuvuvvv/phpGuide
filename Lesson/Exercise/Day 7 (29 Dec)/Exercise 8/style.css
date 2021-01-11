@@ -5,7 +5,7 @@ body {
 img.img_primary {
 	height: 200px;
 }
-.container {
+.menu-items {
 	text-align: center;
 	background-color: #ff8000;
 }
@@ -24,7 +24,7 @@ a.link {
 a:hover.link {
 	color: white; 
 }
-div:hover.ctn {
+div:hover.items {
 	background-color: #ff4000;
 }
 .col-sm_1 {
@@ -34,10 +34,10 @@ div:hover.ctn {
 p, li {
 	font-size: 20px;
 }
-.text {
+.content {
 	text-align: justify;
 }
-.image_text {
+.image_center {
 	text-align: center;
 }
 img.img_secondary {
@@ -53,7 +53,7 @@ img.size-img {
 footer {
 	background-color: white;
 }
-p.comment {
+p.postsript {
 	text-align: right;
 	padding: 35px;
 	color: white;

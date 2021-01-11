@@ -7,8 +7,8 @@
 		<link rel="stylesheet" href="bootstrap.css">
 	</head>
 	<body>
-		<div class="container-sm">	
-			<h5 class="para">Đăng ký thành viên</h5>
+		<div class="container-lg">	
+			<h5 class="heading">Đăng ký thành viên</h5>
 			<p>Để đăng ký thành viên, bạn cần khai báo tát cả các ô trống dưới đây</p>
 			<form action="" method="post">
 				<input class="input" type="text" id="lastname" name="lastName" placeholder="Họ và tên đệm"><br>
@@ -16,7 +16,7 @@
 				<input class="input" type="text" id="username" name="userName" placeholder="Tên đăng nhập"><br>
 				<input class="input" type="email" id="email" name="email" placeholder="Email"><br>
 				<input class="input" type="password" id="pass" name="pass" placeholder="Mật khẩu"><br>
-				<input class="input" type="password" id="confirm_pass" name="confirm_p	q1ass" placeholder="Lặp lại mật khẩu"><br>
+				<input class="input" type="password" id="confirm_pass" name="confirm_pass" placeholder="Lặp lại mật khẩu"><br>
 				<span id="errorpass"></span>
 				<div class="row">
 					<div class="col-sm-4">
@@ -51,7 +51,7 @@
 				<div class="click">
 					<label><input type="checkbox" id="agree" name="choice">Tôi đồng ý với <a class="link" href="">Quy định đăng ký thành viên</a></label>
 				</div>
-				<div class="click">
+				<div class="button-controls">
 					<button type="reset">Thiết lập lại</button>
 					<button onclick="checkPass(); return false;">Đăng ký thành viên</button>
 				</div>
@@ -60,8 +60,6 @@
 		<script type="text/javascript">
 			function checkPass()
 			{
-				var pass         ="";
-				var confirm_pass ="";
 				if(document.getElementById('pass').value == document.getElementById('confirm_pass').value)
 				{
 					document.getElementById('errospass').innerHTML = "";
