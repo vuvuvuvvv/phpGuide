@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+	    <title>Eercise 1</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<h3>Tìm max - min</h3>
+	    <p>Nhập vào số thứ nhất:</p>
+		<input id="1stNum" name="number" type="text"><br>
+	    <p>Nhập vào số thứ hai:</p>
+		<input id="2ndNum" name="number" type="text"><br>
+		<p>Nhập vào số thứ ba:</p>
+		<input id="3rdNum" name="number" type="text"><br>
+		<br>
+		<button type="button" onclick="max-min()">Hiển thị max - min</button>
+		<p id="result"></p>
+	    <script>
+		    function max-min() {
+			    var a = document.getElementById('1stNum').value;
+				var b = document.getElementById('2ndNum').value;
+				var c = document.getElementById('3rdNum').value;
+				var txt, max, min;
+				max = a;
+				if(isNaN(a) || isNaN(b) || isNaN(c)) {
+				    txt = "<b>Invalid value!</b>";
+				} else if(a==b && b==c) {
+				    txt = "<b>Cả ba số đều bằng nhau</b>";
+				} else {
+					if(max <b) {
+					    max = b;
+					} if(max <c) {
+						max = c;
+					} if (a < c) {
+						min = a;
+					} if (c < a) {
+						min = c;
+					}
+				    txt = "Số lớn nhất: " + max + "<br>" + "Số bé nhất: " + min;
+				} 
+				document.getElementById("result").innerHTML = txt;
+			}
+		</script>
+	</body>
+</html>

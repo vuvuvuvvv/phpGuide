@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+	    <title>Eercise 1</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<h3>Giải phương trình bậc nhất: ax + b = 0</h3>
+	    <p>Nhập vào hệ số a:</p>
+		<input id="1stNum" name="number" type="text"><br>
+	    <p>Nhập vào hệ số b:</p>
+		<input id="2ndNum" name="number" type="text"><br>
+		<br>
+		<button type="button" onclick="check()">Tìm x</button>
+		<p id="result"></p>
+		<p id="find"></p>
+	    <script>
+		    function check() {
+			    var a = document.getElementById('1stNum').value;
+				var b = document.getElementById('2ndNum').value;
+				var x = - b / a;
+				var txt;
+				if(isNaN(a) || isNaN(b)) {
+				    txt = "<b>Invalid value!</b>";
+				} else if(a==0 || b==0) {
+				    txt = "<b>Phương trình vô nghiệm</b>";
+				} else if(a==0 && b==0) {
+				    txt = "<b>Phương trình có vô số nghiệm</b>";
+				} else {
+				    txt = "<b>Phương trình có nghiệm: x = </b>" + x;
+				}
+				document.getElementById("result").innerHTML = "<b>Phương trình có dạng: </b>" + a + "x + " + b + " = 0"; 
+				document.getElementById("find").innerHTML = txt;
+			}
+		</script>
+	</body>
+</html>

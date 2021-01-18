@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Exercise 3</title>
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=deivice-width, initial-scale=1">
+	</head>
+    <body>
+	    <span>Nhap do dai hang ngang</span>
+		<input type="number" id="row"><br>
+		<span>Nhap do dai hang doc</span>
+		<input type="number" id="col"></br><br>
+		<button type="button" onclick="build()">Build</button>
+        <br>
+		<span id="build"></span>
+		<script>
+		    function build() {
+			    var a = document.getElementById('row').value;
+				var b = document.getElementById('col').value;
+				var i = 1;
+                var j = 1;
+                var row = "";
+                var col = "";
+				for(i;i<=b;i++) {
+				    for (j; j<=a; j++) {
+					    row += "*";
+					}
+                    col += row + "<br>";
+				}
+				document.getElementById("build").innerHTML = col;
+			}
+		</script>
+	</body>
+</html>

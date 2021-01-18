@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Exercise 7</title>
+		<link rel="icon" type="image/gif" href="favicon.ico">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=divice-width initial-scale=1">
+	</head>
+	<body>
+        <script>
+    	    var txt;
+	    	var number = prompt("Nhập vào một số bất kỳ:");
+		    if(isNaN(number)) {
+		        txt = "This's not a number! Please try again!";
+		    } else if (number % 2 == 0) {
+		        txt = "So " + number + " la so chan!";
+		    } else {
+		        txt = "So " + number + " la so le!";
+		    }
+		    alert(txt);
+		</script>
+	</body>
+</html>
