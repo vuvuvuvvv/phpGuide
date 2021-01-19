@@ -5,27 +5,29 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<span>1st Number:</span>
-		<input type="number" name="first-number" id="fNumber"><br>
-		<span>2st Number:</span>
-		<input type="number" name="second-number" id="sNumber"><br><br>
-		<button type="button" onclick="multiply()">Multiply</button>
-		<button type="button" onclick="divide()">Devide</button>
-		<br>
-		<p>The Result Is:</p>
-		<span id="result"></span>
+		<form method="POST">
+			<span>1st Number:</span>
+			<input type="number" name="first-number" id="firstNumber" required><br>
+			<span>2st Number:</span>
+			<input type="number" name="second-number" id="lastNumber" required><br><br>
+			<button type="button" onclick="multiply()">Multiply</button>
+			<button type="button" onclick="divide()">Devide</button>
+			<br>
+			<p>The Result Is:</p>
+			<span id="result"></span>
+		</form>
 		<script type="text/javascript">
 			function multiply()
 				{
-					var a = document.getElementById("fNumber").value;
-					var b = document.getElementById("sNumber").value;
+					var a = document.getElementById("firstNumber").value;
+					var b = document.getElementById("lastNumber").value;
 					var x = a * b;
 					document.getElementById("result").innerHTML = x;
 				};
 			function divide()
 				{
-					var a = document.getElementById("fNumber").value;
-					var b = document.getElementById("sNumber").value;
+					var a = document.getElementById("firstNumber").value;
+					var b = document.getElementById("lastNumber").value;
 					var y = a / b;
 					document.getElementById("result").innerHTML = y;
 				}

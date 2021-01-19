@@ -6,13 +6,15 @@
 		<meta name="viewport" content="width=deivice-width, initial-scale=1">
 	</head>
     <body>
-	    <span>Nhap do dai hang ngang</span>
-		<input type="number" id="row"><br>
-		<span>Nhap do dai hang doc</span>
-		<input type="number" id="col"></br><br>
-		<button type="button" onclick="build()">Build</button>
-        <br>
-		<span id="build"></span>
+	    <form method="POST">
+	        <span>Nhap do dai hang ngang</span>
+			<input type="number" id="row" required><br>
+		    <span>Nhap do dai hang doc</span>
+			<input type="number" id="col" required></br><br>
+			<button type="button" onclick="build()">Build</button>
+			<br>
+			<span id="build"></span>
+		</form>
 		<script>
 		    function build() {
 			    var a = document.getElementById('row').value;
