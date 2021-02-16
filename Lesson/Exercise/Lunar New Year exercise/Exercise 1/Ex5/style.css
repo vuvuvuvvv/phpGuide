@@ -1,0 +1,42 @@
+.fontBrand {
+    font-family: 'Kaushan Script', cursive;
+}
+.mainColor {
+    background-color: #e74c3c;
+}
+.heading {
+    width: 200px;
+    height: 200px;
+    padding: 55px 0px;
+    font-size: 60px;;
+}
+img {
+    height: 200px;
+}
+.fontContent {
+    font-family: 'Josefin Slab', serif;
+}
+.fontSizeContent {
+    font-size: 20px;
+}
+.fontNote {
+    font-family: 'Potta One', cursive;
+}
+.btn-warning {
+    background-color: #e74c3c !important;
+    border-color: #e74c3c !important;
+}
+.iconColor{
+    color: #e74c3c;
+}
+.btnSubResponsive {
+    visibility: hidden;
+}
+@media only screen and (max-width: 990px){
+    .formResponsive {
+        display: none;
+    }
+    .btnSubResponsive {
+        visibility: visible;
+    }
+}

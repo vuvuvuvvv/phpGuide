@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 4</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">    
+            <div class="container">        
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" id="navbardrop" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                DropDown
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item border-top" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto responsiveForm">
+                        <li class="nav-item">
+                            <form class="form-inline ml-auto" action="#">
+                                <input type="email" class="form-control mr-md-2" placeholder="Email">
+                                <input type="password" class="form-control mr-md-2" placeholder="Password">
+                                <button class="btn btn-success" type="submit">Sign in</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="bg-header">
+            <div class="container">
+                <div class=" py-5 text-justify">
+                    <h1 class="heading">Hello, world!</h1>
+                    <h6>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit .
+                        Itaque deleniti quod ratione perspiciatis molestias minus id,
+                        velit, onsectetur voluptatibus et obcaecati hic magnem alias, cumque autem. Hix quis ipsum harum.
+                    </h6><br>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalHeading">Learn more</button>
+                    <div class="modal fade" id="modalHeading" role="dialog"> 
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4>Sample modal title</h4>
+                                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit . 
+                                        Necessitatibus nihil repellendus cumque fugiat optio qui facilis ipsam ! 
+                                        Eius nostrum sed aliquam , quis unde error molestiae magnam , doloremque aut aliquid accusantium !
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default btn-secondary mr-2" data-dismiss="modal">Close</button>
+                                    <button type="but" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container mt-2">
+            <div class="alert alert-warning alert-dimissinle fade show">
+                <strong>Holy guacamole!</strong>You should check in on some of those fields below.
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>    
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h2>Heading</h2>
+                    <p>
+                        Lorem ipsum , dolor sit amet consectetur adipisicing elit . 
+                        Fuga voluptatibus eos illum sunt voluptate assumenda magni quibusdam . 
+                        Impedit , aliquid ? Voluptatum doloremque repellendus ut at laborum architecto explicabo facere ad Quisquam !
+                    </p>
+                    <button type="button" class="btn btnColor" data-toggle="modal" data-target="#modalContent"><i class="far fa-thumbs-up"></i> View details</button>
+                </div>
+                <div class="col-12 col-md-4 responsiveContent">
+                    <h2>Heading</h2>
+                    <p>
+                        Lorem ipsum , dolor sit amet consectetur adipisicing elit . 
+                        Fuga voluptatibus eos illum sunt voluptate assumenda magni quibusdam . 
+                        Impedit , aliquid ? Voluptatum doloremque repellendus ut at laborum architecto explicabo facere ad Quisquam !
+                    </p>
+                    <button type="button" class="btn btnColor" data-toggle="modal" data-target="#modalContent"><i class="fas fa-mobile-alt"></i> View details</button>
+                </div>
+                <div class="col-12 col-md-4 responsiveContent">
+                    <h2>Heading <span class="badge bg-primary text-light">New</span> </h2>
+                    <p>
+                        Lorem ipsum , dolor sit amet consectetur adipisicing elit . 
+                        Fuga voluptatibus eos illum sunt voluptate assumenda magni quibusdam . 
+                        Impedit , aliquid ? Voluptatum doloremque repellendus ut at laborum architecto explicabo facere ad Quisquam !
+                    </p>
+                    <button type="button" class="btn btnColor" data-toggle="modal" data-target="#modalContent"><i class="fas fa-map-marker-alt"></i> View details</button>
+                </div>
+                <div id="modalContent" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Contact Us</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <label for="guestName">Guest name</label>
+                                <input type="text" class="form-control" id="guestName">
+                                <label for="feedBack">Feedback</label>
+                                <textarea class="form-control" rows="6" id="feedBack"></textarea>
+                                <hr>
+                                <button type="button" class="btn btn-default btn-secondary p-2" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

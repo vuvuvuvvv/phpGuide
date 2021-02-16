@@ -1,0 +1,9 @@
+.side_bar {
+    height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #d6d2d2 !important;
+}
+.container {
+    margin-top: 25px;
+}

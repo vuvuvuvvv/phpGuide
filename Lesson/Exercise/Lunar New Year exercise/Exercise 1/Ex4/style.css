@@ -1,0 +1,24 @@
+* {
+    font-family:'Times New Roman', Times, serif;
+}
+.bg-header {
+    background-color: #eaecef;
+}
+.btnColor {
+    background-color: #eaecef !important;
+}
+.heading {
+    font-size: 60px;
+}
+@media only screen and (max-width: 767px)
+{
+    div.responsiveContent {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1000px)
+{
+    ul.responsiveForm {
+        display: none;
+    }
+}
