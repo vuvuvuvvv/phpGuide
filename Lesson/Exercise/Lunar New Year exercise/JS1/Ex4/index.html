@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 4</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>   
+        <h4>Tìm giai thừa</h4>                  
+        <p>Nhập vào hệ số giai thừa:</p>
+        <form class="form-inline" action="#">
+            <input id="number" class="form-control" type="number">
+            <button type="button" class="btn btn-primary" onclick="factorial()">Tính giai thừa</button>
+        </form>
+        <small class="invisible" id="notifyValidate">*Khong duoc bo trong!</small>
+        <small class="invisible" id="notifyCheckNum">*Du lieu nhap khong hop le!</small>
+        <span id="result"></span>
+        <script>
+            function factorial() {
+                var i;
+                var factorial = 1;
+                const number = document.getElementById("number");
+                let numberValue = number.value.trim()
+                if(numberValue === "" ) {
+                    document.getElementById("number").className = "form-control border-danger";
+                    document.getElementById("notifyValidate").className = "visible text-danger";
+                    document.getElementById("notifyCheckNum").className = "d-none";
+                    document.getElementById("result").className = "d-none";
+                } else if (numberValue <= 0 ) {
+                    document.getElementById("number").className = "form-control border-danger";
+                    document.getElementById("notifyCheckNum").className = "visible text-danger";
+                    document.getElementById("notifyValidate").className = "d-none";
+                    document.getElementById("result").className = "d-none";
+                } else {
+                    for(i=1;i<=numberValue;i++) {
+                        factorial = factorial * i;
+                    }
+                   document.getElementById("result").innerHTML = numberValue + "! = " + factorial;
+                   document.getElementById("result").className = "text-success";
+                   document.getElementById("number").className = "form-control border-success";
+                   document.getElementById("notifyCheckNum").className = "d-none";
+                   document.getElementById("notifyValidate").className = "d-none";
+                }
+            }
+        </script>
+    </body>
+</html>

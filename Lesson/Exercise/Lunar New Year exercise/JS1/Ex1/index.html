@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+	    <title>Eercise 1</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width initial-scale=1">
+	</head>
+	<body>
+	    <form method="POST">
+			<p>Nhập vào số a:</p>
+			<input id="num" name="number" type="text" required><br>
+			<br>
+			<button type="button" onclick="check()">Tìm x</button>
+			<p id="result"></p>
+        </form>
+	    <script>
+		    function check() {
+			    var num = document.getElementById('num').value;
+				var result;
+				if(isNaN(num)) {
+				    result = "This's not a number!";
+				} else if(1<num && num<10) {
+				    result = num + " nằm trong khoảng 1-10";
+				} else if(50<num && num<100) {
+				    result = num + " nằm trong khoảng 50-100";
+				} else {
+				    result = num + " không nằm trong khoảng từ 1-10 hoặc từ 50-100";
+				}
+				document.getElementById("result").innerHTML = result;
+			}
+		</script>
+	</body>
+</html>

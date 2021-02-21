@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+	    <title>Eercise 1</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width initial-scale=1">
+	</head>
+	<body>
+	    <form method="POST">
+			<h3>Giải phương trình bậc nhất: ax + b = 0</h3>
+			<p>Nhập vào hệ số a:</p>
+			<input id="firstNum" name="number" type="text" required><br>
+			<p>Nhập vào hệ số b:</p>
+			<input id="lastNum" name="number" type="text" required><br>
+			<br>
+			<button type="button" onclick="check()">Tìm x</button>
+			<p id="result"></p>
+			<p id="find"></p>
+		</form>
+	    <script>
+		    function check() {
+			    var a = document.getElementById('firstNum').value;
+				var b = document.getElementById('LastNum').value;
+				var x = - b / a;
+				var result;
+				if(isNaN(a) || isNaN(b)) {
+				    result = "<b>Invalid value!</b>";
+				} else if(a==0 && b!=0) {
+				    result = "<b>Phương trình vô nghiệm</b>";
+				} else if(a==0 && b==0) {
+				    result = "<b>Phương trình có vô số nghiệm</b>";
+				} else if(a!=0 && b==0) {
+				    result = "<b>Phonwg trình có nghiệm duy nhất: x = 0";
+				} else {
+				    result = "<b>Phương trình có nghiệm: x = </b>" + x;
+				}
+				document.getElementById("result").innerHTML = "<b>Phương trình có dạng: </b>" + a + "x + " + b + " = 0"; 
+				document.getElementById("find").innerHTML = result;
+			}
+		</script>
+	</body>
+</html>
