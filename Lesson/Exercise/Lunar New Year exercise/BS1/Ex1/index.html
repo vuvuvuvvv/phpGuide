@@ -27,31 +27,31 @@
 		<script> 
 			const firstName = document.getElementById("firstName");
 			const lastName = document.getElementById("lastName");
+			const notifyFirstName = document.getElementById("notify_lastName");
+			const notifyLastName = document.getElementById("notify_firstName");
 			function checkInfo() {
 				let firstNameValue = firstName.value.trim();
 				let lastNameValue = lastName.value.trim();
 				if (firstNameValue === "" && lastNameValue === "") {
-					document.getElementById("notify_firstName").className = "text-danger visible";
-					document.getElementById("firstName").className = "form-control border border-danger";
-					document.getElementById("notify_lastName").className = "text-danger visible";
-					document.getElementById("lastName").className = "form-control border border-danger";
-
+					notifyFirstName.className = "text-danger visible";
+					firstName.className = "form-control border border-danger";
+					notifyLastName.className = "text-danger visible";
+					lastName.className = "form-control border border-danger";
 				} else if (firstNameValue != "" && lastNameValue ==="") {
-					document.getElementById("notify_lastName").className = "text-danger visible";
-					document.getElementById("lastName").className = "form-control border border-danger";
-					document.getElementById("notify_firstName").className = "invisible";
-					document.getElementById("firstName").className = "form-control border border-success";
-
+					notifyFirstName.className = "text-danger visible";
+					lastName.className = "form-control border border-danger";
+					notifyLastName.className = "invisible";
+					firstName.className = "form-control border border-success";
 				} else if (lastNameValue != "" && firstNameValue === "") {
-					document.getElementById("notify_firstName").className = "text-danger visible";
-					document.getElementById("firstName").className = "form-control border border-danger";
-					document.getElementById("notify_lastName").className = "invisible";
-					document.getElementById("lastName").className = "form-control border border-success";
+					notifyFirstName.className = "text-danger visible";
+					firstName.className = "form-control border border-danger";
+					notifyLastName.className = "invisible";
+					lastName.className = "form-control border border-success";
 				} else {
-					document.getElementById("notify_firstName").className = "invisible";
-					document.getElementById("firstName").className = "form-control border border-success";
-					document.getElementById("notify_lastName").className = "invisible";
-					document.getElementById("lastName").className = "form-control border border-success";
+					notifyFirstName.className = "invisible";
+					firstName.className = "form-control border border-success";
+					notifyLastName.className = "invisible";
+					lastName.className = "form-control border border-success";
 					document.getElementById("result").innerHTML = firstNameValue + " " + lastNameValue;
 				}
 			}
