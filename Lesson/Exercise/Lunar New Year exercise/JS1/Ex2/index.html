@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head> 
-	    <title>Eercise 1</title>
+	    <title>Eercise 2</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width initial-scale=1">
 	</head>
@@ -19,22 +19,22 @@
 		</form>
 	    <script>
 		    function check() {
-			    var a = document.getElementById('firstNum').value;
-				var b = document.getElementById('LastNum').value;
-				var x = - b / a;
+			    var firstNum = document.getElementById('firstNum').value;
+				var lastNum = document.getElementById('lastNum').value;
+				var x = - (lastNum / firstNum);
 				var result;
-				if(isNaN(a) || isNaN(b)) {
+				if(isNaN(firstNum) || isNaN(lastNum)) {
 				    result = "<b>Invalid value!</b>";
-				} else if(a==0 && b!=0) {
+				} else if(firstNum==0 && lastNum!=0) {
 				    result = "<b>Phương trình vô nghiệm</b>";
-				} else if(a==0 && b==0) {
+				} else if(firstNum==0 && lastNum==0) {
 				    result = "<b>Phương trình có vô số nghiệm</b>";
-				} else if(a!=0 && b==0) {
-				    result = "<b>Phonwg trình có nghiệm duy nhất: x = 0";
+				} else if(firstNum!=0 && lastNum==0) {
+				    result = "<b>Phương trình có nghiệm duy nhất: x = 0</b>";
 				} else {
 				    result = "<b>Phương trình có nghiệm: x = </b>" + x;
 				}
-				document.getElementById("result").innerHTML = "<b>Phương trình có dạng: </b>" + a + "x + " + b + " = 0"; 
+				document.getElementById("result").innerHTML = "<b>Phương trình có dạng: </b>" + firstNum + "x + " + lastNum + " = 0"; 
 				document.getElementById("find").innerHTML = result;
 			}
 		</script>

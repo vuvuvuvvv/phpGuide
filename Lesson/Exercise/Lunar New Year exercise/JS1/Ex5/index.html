@@ -4,6 +4,7 @@
         <title>Exercise 5</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
     </head>
     <body>
         <div class="container-md">
@@ -11,15 +12,54 @@
                 <label for="name">Name:</label>
                 <input  type="text" id="name" placeholder="Enter name here..."><br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Enter email here..."><br>
+                <input type="email" id="email" placeholder="Enter email here...">
+                <span id="notifyValidateEmail" class="d-none"></span>
+                <br>
                 <label for="country">Country</label>
-                <select name="country" id="country"" class="form-select" aria-label="Default select example">
-                    <option selected>Select-Country</option>
-                    <option value="VietName">VietNam</option>
-                    <option value="Japan">Japan</option>
-                    <option value="USA">USA</option>
-                </select>
+                <select name="country" id="country" class="form-select" aria-label="Default select example">
+                    <option selected value="-1">Select-Country</option>
+                    <option value="1">VietNam</option>
+                    <option value="2">Japan</option>
+                    <option value="3">USA</option>
+                </select><br>
+                <button type="button" id="sendInfo">Send info</button> 
             </form>
         </div>
     </body>
+    <script>
+        document.getElementById("sendInfo").addEventListener("click",function(){
+            checkName();
+            checkEmail();
+            checkSelectCountry();
+        })
+        function checkName() {
+            const name = document.getElementById('name');
+            if(name.value.trim() == ""){
+                name.focus();
+                alert("Name cannot be left blank");
+            }
+        }
+        function checkEmail() {
+            var email=document.getElementById("email");
+            if(email.value==""){
+                alert("Email cannot be left blank");
+                email.focus();
+            } else{
+                if(email.value.match(/^[A-Za-z0-9-\.+*/_]+@[a-z0-9]+\.[a-z0-9]{2,3}$/)){
+                    document.getElementById("notifyValidateEmail").className="d-none";
+                } else{
+                    document.getElementById("notifyValidateEmail").innerHTML="*Email invalidate";
+                    document.getElementById("notifyValidateEmail").className="text-danger d-block";
+                    email.focus();
+                }
+            }
+        }
+        function checkSelectCountry() {
+            var selectCountry=document.getElementById("country");
+            if(selectCountry.value == -1){
+                alert("Select cannot be left blank");
+                selectCountry.focus();
+            }
+        }
+    </script>
 </html>

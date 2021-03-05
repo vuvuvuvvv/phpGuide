@@ -5,20 +5,20 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.css">
-		<link>
+		<link rel="stylesheet" href="fontawesome/css/all.css">
 	</head>
 	<body>
 		<div class="container">
 			<form action="#" method="POST" onsubmit="return checkInfo()">
 				<div class="form-group">
-					<label for="firstName">First Name</label>
+					<label for="firstName">First Name <i class="fab fa-accessible-icon"></i></label>
 					<input id="firstName" class="form-control" type="text" placeholder="Enter first name" name="firstName">
-					<p><small class="text-danger invisible" id="notify_firstName">*Truong nhap khong duoc bo trong</small></p>
+					<p><small class="text-danger d-none" id="notify_firstName">*Truong nhap khong duoc bo trong</small></p>
 				</div>
 				<div class="form-group">
 					<label for="lastName">Last Name</label>
 					<input id="lastName" type="text" class="form-control" placeholder="Enter last name" name="lastName">
-					<p><small class="invisible" id="notify_lastName">*Truong nhap khong duoc bo trong</small></p>
+					<p><small class="d-none" id="notify_lastName">*Truong nhap khong duoc bo trong</small></p>
 				</div>
 				<button type="button" class="btn btn-outline-danger" onclick="checkInfo()">Submit</button>
 			</form><br>
@@ -33,26 +33,30 @@
 				let firstNameValue = firstName.value.trim();
 				let lastNameValue = lastName.value.trim();
 				if (firstNameValue === "" && lastNameValue === "") {
-					notifyFirstName.className = "text-danger visible";
+					notifyFirstName.className = "text-danger d-block";
 					firstName.className = "form-control border border-danger";
-					notifyLastName.className = "text-danger visible";
+					notifyLastName.className = "text-danger d-block";
 					lastName.className = "form-control border border-danger";
+					// return false;
 				} else if (firstNameValue != "" && lastNameValue ==="") {
-					notifyFirstName.className = "text-danger visible";
+					notifyFirstName.className = "text-danger d-block";
 					lastName.className = "form-control border border-danger";
-					notifyLastName.className = "invisible";
+					notifyLastName.className = "d-none";
 					firstName.className = "form-control border border-success";
+					// return false;
 				} else if (lastNameValue != "" && firstNameValue === "") {
-					notifyFirstName.className = "text-danger visible";
+					notifyFirstName.className = "text-danger d-block";
 					firstName.className = "form-control border border-danger";
-					notifyLastName.className = "invisible";
+					notifyLastName.className = "d-none";
 					lastName.className = "form-control border border-success";
+					// return false;
 				} else {
-					notifyFirstName.className = "invisible";
+					notifyFirstName.className = "d-none";
 					firstName.className = "form-control border border-success";
-					notifyLastName.className = "invisible";
+					notifyLastName.className = "d-none";
 					lastName.className = "form-control border border-success";
 					document.getElementById("result").innerHTML = firstNameValue + " " + lastNameValue;
+					// return true;
 				}
 			}
 		</script>
