@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h2 class="text-center">Chu vi và diện tích hình chữ nhật</h2>
+                    <hr>
+                    <small>Nhập vào chiều dài (đơn vị: met)</small>
+                    <input class="form-control" type="text" name="lenght" id="lenght">
+                    <small>Nhập vào chiều rộng (đơn vị: met)</small>
+                    <input class="form-control" type="text" name="width" id="width"><br>
+                    <button type="button" onclick="checkAndCal()" id="btnCal"class="btn-success btn">Tính chu vi diện tích</button>
+                    <p class="text-primary" id="perimeter"></p>
+                    <p class="text-primary" id="acreage"></p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+        <script>
+            var lenght = document.getElementById("lenght");
+            var width = document.getElementById("width");
+            function checkLenght() {
+                if(lenght.value.trim() == "" ){
+                    alert('Không được bỏ trống chiều dài');
+                    lenght.focus();
+                    return false;
+                } else if(isNaN(lenght.value)){
+                    alert('Cần nhập dữ liệu chiều dài là số');
+                    lenght.focus();
+                    return false;
+                } else if(lenght.value == 0){
+                    alert('Cần nhập dữ liệu chiều dài là số lớn hơn 0');
+                    lenght.focus();
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            function checkWidth() {
+                if(width.value.trim() == ""){
+                    alert('Không được bỏ trống chiều rộng');
+                    width.focus();
+                    return false;
+                } else if(isNaN(width.value)){
+                    alert('Cần nhập dữ liệu chiều rộng là số');
+                    width.focus();
+                    return false;
+                } else if(width.value == 0){
+                    alert('Cần nhập dữ liệu chiều rộng là số lớn hơn 0');
+                    width.focus();
+                    return false; 
+                } else {
+                    return true;
+                }
+            }
+            function checkAndCal() {
+                var perimeter = document.getElementById("perimeter");
+                var acreage = document.getElementById("acreage");
+                var per = lenght.value *2 + width.value *2;
+                var acr = lenght.value * width.value;
+                if(checkLenght() === true && checkWidth() === true){
+                    perimeter.innerHTML = "Chu vi = " + per +"m";
+                    acreage.innerHTML = "Diện tích = " + acr + "m<sup>2</sup>";
+                }
+            }
+        </script>
+    </body>
+</html>
