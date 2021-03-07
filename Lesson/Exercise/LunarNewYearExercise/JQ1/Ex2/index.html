@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h2 class="text-center">Số chẵn lẻ</h2>
+                    <hr>
+                    <p>Nhập số a:</p>
+                    <input class="form-control" type="text" name="number" id="number"><br>
+                    <button type="button" onclick="checkAndPrint()" class="btn-success btn">Kết quả</button>
+                    <p class="d-none" id="evenNum">Các số chẵn từ 1 cho tới a là: </p>
+                    <p class="d-none" id="oddNum">Các số lẻ từ 1 cho tới a là: </p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+        <script>
+            function checkAndPrint() {
+                let num = document.getElementById("number");
+                let evenNum = document.getElementById("evenNum");
+                let oddNum = document.getElementById("oddNum");
+                let i = 1;
+                if(num.value.trim() == ""){
+                    alert('Không được bỏ trống!');
+                    num.focus();
+                    evenNum.className = "d-none text-primary";
+                    oddNum.className = "d-none text-primary";
+                } else if(isNaN(num.value)){
+                    alert('Cần nhập dữ liệu là số lớn hơn 1');
+                    num.focus();
+                    evenNum.className = "d-none text-primary";
+                    oddNum.className = "d-none text-primary";
+                } else if(num.value == 0){
+                    alert('Cần nhập dữ liệu là số lớn hơn 1');
+                    num.focus();
+                    evenNum.className = "d-none text-primary";
+                    oddNum.className = "d-none text-primary";
+                } else {
+                    evenNum.className = "d-block text-primary";
+                    oddNum.className = "d-block text-primary";
+                    for(i;i<=num.value;i++) {
+                        if(i % 2 == 0){
+                            evenNum.innerHTML += i + " ";
+                        } else {
+                            oddNum.innerHTML += i + " ";
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

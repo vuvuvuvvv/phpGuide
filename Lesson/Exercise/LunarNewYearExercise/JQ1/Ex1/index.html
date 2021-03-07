@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercise 3</title>
+        <title>Exercise 1</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.css">
@@ -19,7 +19,7 @@
                     <input class="form-control" type="text" name="lenght" id="lenght">
                     <small>Nhập vào chiều rộng (đơn vị: met)</small>
                     <input class="form-control" type="text" name="width" id="width"><br>
-                    <button type="button" onclick="checkAndCal()" id="btnCal"class="btn-success btn">Tính chu vi diện tích</button>
+                    <button type="button" onclick="checkAndCal()" class="btn-success btn">Tính chu vi diện tích</button>
                     <p class="text-primary" id="perimeter"></p>
                     <p class="text-primary" id="acreage"></p>
                 </div>
@@ -69,8 +69,8 @@
                 var per = lenght.value *2 + width.value *2;
                 var acr = lenght.value * width.value;
                 if(checkLenght() === true && checkWidth() === true){
-                    perimeter.innerHTML = "Chu vi = " + per +"m";
-                    acreage.innerHTML = "Diện tích = " + acr + "m<sup>2</sup>";
+                    perimeter.innerHTML = "Chu vi = " + per +" m";
+                    acreage.innerHTML = "Diện tích = " + acr + " m<sup>2</sup>";
                 }
             }
         </script>
