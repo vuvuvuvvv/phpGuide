@@ -39,11 +39,11 @@
                     $address = test_input($_POST["address"]);
                 }
                 //magazines
-                if(empty($_POST["magazines"])){
-                    $magazinesErr = " *Must choose at leasr 1 magazine!"; 
-                } else {
-                    $magazines = test_input($_POST["magazines"]);
-                }
+                // if(empty($_POST["magazines"])){
+                //     $magazinesErr = " *Must choose at leasr 1 magazine!"; 
+                // } else {
+                //     $magazines = test_input($_POST["magazines"]);
+                // }
                 //duration
                 if(empty($_POST["duration"])){
                     $durationErr = " *Cannot be empty!"; 
@@ -80,18 +80,7 @@
         ?>
         
         <!--???-->
-        <?php if($_SERVER["REQUEST_METHOD"] == "POST"){ ?>
-            <?php
-                if (isset($_POST["save"])) {
-                    $firstName = $_POST["firstName"]; ?>
-                <script>
-                    const areYouSure = confirm("Do you want to order <?php //? ?> for <?php echo $duration; ?> and to pay with <?php echo $payment; ?> ");
-                    if (areYouSure){
-                        alert("<?php echo "....."; ?>");    //error 
-                    }
-                </script>
-            <?php } ?>
-        <?php } ?>
+        
         <div class="container py-3">
             <h2 class="text-center text-success my-3">Subcription Form</h2>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
